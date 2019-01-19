@@ -1,0 +1,13 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - sh-db</title>
+      {% else %}
+      <title>sh-db</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>sh-db: <a href="/index">Home</a></div>
+        {% block content %}{% endblock %}
+    </body>
+</html>

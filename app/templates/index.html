@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>sh: {{ shelf }}</h1>
+    {% for box in boxes %}
+    <div><p>{{ box.label }} contains: <b>{{ box.content }}</b></p></div>
+    {% endfor %}
+{% endblock %}
