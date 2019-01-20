@@ -9,3 +9,5 @@ $ . venv/bin/activate
 $ pip3 install Flask
 $ FLASK_APP=sh-db.py flask run
 ```
+
+Learning by doing, courtesy from [here](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world).
