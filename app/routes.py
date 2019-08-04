@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, flash, redirect
 from app import app
 from app.forms import UploadForm
 
@@ -18,7 +18,10 @@ def index():
     ]
     return render_template('index.html', title='Home', shelf=shelf, boxes=boxes)
 
-@app.route('/upload')
+@app.route('/upload', methods=['GET', 'POST'])
 def upload():
     form = UploadForm()
+    if form.validate_on_submit():
+        flash('Upload requested')
+        return redirect('/index')
     return render_template('upload.html', title='Upload', form=form)
