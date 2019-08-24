@@ -12,6 +12,8 @@ $ . venv/bin/activate
 (venv)$ flask db migrate
 (venv)$ flask db upgrade
 (venv)$ flask run
+(venv)$ deactivate
+$
 ```
 
 Learning by doing, courtesy from [here](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world), results [here](https://github.com/u1313/sh-db).
