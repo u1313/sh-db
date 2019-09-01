@@ -22,6 +22,7 @@ def index():
 def upload():
     form = UploadForm()
     if form.validate_on_submit():
+        # db.session.commit()
         flash('Upload requested')
         return redirect('/index')
     return render_template('upload.html', title='Upload', form=form)

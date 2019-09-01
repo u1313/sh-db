@@ -1,6 +1,6 @@
 from app import db
 
-class Images(db.Model):
+class Image(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), index=True, unique=True)
     img = db.Column(db.BLOB)
@@ -8,11 +8,11 @@ class Images(db.Model):
 
     def __repr__(self): '<Img {}>'.format(self.name)
 
-class Boxes(db.Model):
+class Box(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), index=True, unique=True)
     description = db.Column(db.String(128))
-    img_id = db.Column(db.Integer, db.ForeignKey('images.id'))
+    img_id = db.Column(db.Integer, db.ForeignKey('image.id'))
 
     def __repr__(self):
         return '<Box {}>'.format(self.name)
