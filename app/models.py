@@ -11,7 +11,7 @@ class Image(db.Model):
 class Box(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(64), index=True, unique=True)
-    description = db.Column(db.String(128))
+    descr = db.Column(db.String(128))
     img_id = db.Column(db.Integer, db.ForeignKey('image.id'))
 
     def __repr__(self):
